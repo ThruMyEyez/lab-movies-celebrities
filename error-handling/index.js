@@ -1,4 +1,4 @@
-module.exports = (app) => {
+module.exports = app => {
   app.use((req, res, next) => {
     // this middleware runs whenever requested page is not available
     res.status(404).render("not-found");
@@ -11,7 +11,7 @@ module.exports = (app) => {
 
     // only render if the error ocurred before sending the response
     if (!res.headersSent) {
-      res.status(500).render("error");
+      res.status(500).render("error", err);
     }
   });
 };

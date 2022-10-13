@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +9,42 @@ body {
 
 a {
   color: #00b7ff;
+}
+
+#logo {
+  display: block;
+  margin: 21px auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 0 16px;
+}
+
+form {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form button,
+#edit-btn,
+form select,
+form textarea {
+  width: 100%;
+  padding: 4px 2px;
+  border: solid 1px #00b7ff;
+  border-radius: 4px;
+}
+
+form button,
+#edit-btn {
+  background-color: #00b7ff;
+  color: white;
 }
